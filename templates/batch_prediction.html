@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <h2>Regression - Batch Prediction</h2>
+            <form action="{{url_for('batch_reg_predict')}}" method="post">
+                <label>Enter number of records:</label>
+                <input type="text" placeholder="Range <=200" name="records" required="required" />
+                <br><br>
+                <a type="button" href="{{url_for('index')}}">Back</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a type="button" href="{{url_for('batch_prediction')}}">Reset</a>
+                <button type="submit">Batch Predict</button>
+            </form>
+        </div>
+
+
+        <div class="container2">
+            <h2>Classification - Batch Prediction</h2>
+            <form action="{{url_for('batch_class_predict')}}" method="post">
+                <label>Enter number of records:</label>
+                <input type="text" placeholder="Range <=200" name="records" required="required" />
+                <br><br>
+                <a type="button" href="{{url_for('index')}}">Back</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a type="button" href="{{url_for('batch_prediction')}}">Reset</a>
+                <button type="submit">Batch Predict</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

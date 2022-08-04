@@ -1,0 +1,122 @@
+/* INDEX PAGE */
+
+body {
+    /* background-image: url("forest-fires2.jpg"); */
+    /* height: 800px; */
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body h1 {
+    font-size: 50px;
+    color: rgb(229, 110, 25);
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(10, 199, 199);
+    font-size: 40px;
+
+}
+
+#single {
+    padding-left: 350px;
+    margin-top: 150px;
+    float: left;
+}
+
+#batch {
+    padding-right: 350px;
+    margin-top: 150px;
+    float: right;
+}
+
+/* -----------------------------------------------------------------------------------------------*/
+
+/* CONTAINER */
+.container h2 {
+    font-size: 30px;
+    color: brown;
+}
+
+.container #regout {
+    color: green;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+    float: left;
+    padding-left: 200px;
+}
+
+.container #classout {
+    color: green;
+    font-size: 25px;
+    font-style: oblique;
+    font-weight: bold;
+    float: right;
+    padding-right: 500px;
+}
+
+.container label {
+    /* padding-lef: 50px; */
+    font-size: 18px;
+}
+
+.container input {
+    width: 200px;
+    height: 25px;
+}
+
+.container a {
+    color: brown;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.container button {
+    width: 200px;
+    height: 30px;
+    margin-left: 65px;
+}
+
+/* -----------------------------------------------------------------------------------------------*/
+/* CONTAINER-1 */
+
+.container1 {
+    float: left;
+    padding-left: 300px;
+    margin-top: 50px;
+}
+
+.container1 label {
+    color: crimson;
+    width: 180px;
+    /* font-size: 10px; */
+    display: inline-block;
+}
+
+/* -----------------------------------------------------------------------------------------------*/
+/* CONTAINER-2 */
+
+.container2 {
+    float: right;
+    padding-right: 300px;
+    margin-top: 50px;
+}
+
+.container2 label {
+    color: crimson;
+    width: 180px;
+    /* font-size: 10px; */
+    display: inline-block;
+}
+
+/* -----------------------------------------------------------------------------------------------*/

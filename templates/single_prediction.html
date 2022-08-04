@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
+
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="container1">
+            <h2 style="color:brown">Regression - Single Prediction </h2>
+
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{url_for('single_reg_predict')}}" method="post">
+                <label>Temperature</label>
+                <input type="text" name="Temperature" placeholder="Range-[22 to 42]" required="required" /><br>
+
+                <label>Relative Humidity</label>
+                <input type="text" name="RH" placeholder="Range-[21 to 90]" required="required" /><br>
+
+                <label>Wind speed</label>
+                <input type="text" name="Ws" placeholder="Range-[6 to 29]" required="required" /><br>
+
+                <label>Rain</label>
+                <input type="text" name="Rain" placeholder="Range-[0 to 1.25]" required="required" /><br>
+
+                <label>Fine Fuel Moisture</label>
+                <input type="text" name="FFMC" placeholder="Range-[47.7 to 96.0]" required="required" /><br>
+
+                <label>Duff Moisture Code</label>
+                <input type="text" name="DMC" placeholder="Range-[0.7 to 43]" required="required" /><br>
+
+                <label>Drought Code</label>
+                <input type="text" name="DC" placeholder="Range-[6.9 to 150]" required="required" /><br>
+
+                <label>Initial Spread Index</label>
+                <input type="text" name="ISI" placeholder="Range-[0 to 19]" required="required" /><br><br>
+
+                <a type="button" href="{{url_for('index')}}">Back</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a type="button" href="{{url_for('single_prediction')}}">Reset</a>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Single Predict</button>
+            </form>
+            <br><br>
+        </div>
+
+
+        <div class="container2">
+            <h2 style="color:brown">Classification - Single Prediction </h2>
+
+            <!-- Main Input For Receiving Query to our ML -->
+            <form action="{{url_for('single_class_predict')}}" method="post">
+                <label>Temperature</label>
+                <input type="text" width="120" name="Temperature" placeholder="Range-[22 to 42]"
+                    required="required" /><br>
+
+                <label>Relative Humidity</label>
+                <input type="text" name="RH" placeholder="Range-[21 to 90]" required="required" /><br>
+
+                <label>Wind speed</label>
+                <input type="text" name="Ws" placeholder="Range-[6 to 29]" required="required" /><br>
+
+                <label>Rain</label>
+                <input type="text" name="Rain" placeholder="Range-[0 to 1.25]" required="required" /><br>
+
+                <label>Fine Fuel Moisture</label>
+                <input type="text" name="FFMC" placeholder="Range-[47.7 to 96.0]" required="required" /><br>
+
+                <label>Duff Moisture Code</label>
+                <input type="text" name="DMC" placeholder="Range-[0.7 to 43]" required="required" /><br>
+
+                <label>Drought Code</label>
+                <input type="text" name="DC" placeholder="Range-[6.9 to 150]" required="required" /><br>
+
+                <label>Initial Spread Index</label>
+                <input type="text" name="ISI" placeholder="Range-[0 to 19]" required="required" /><br><br>
+
+                <a type="button" href="{{url_for('index')}}">Back</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a type="button" href="{{url_for('single_prediction')}}">Reset</a>
+                <button type="submit" class="btn btn-primary btn-block btn-large">Single Predict</button>
+            </form>
+            <br><br>
+        </div>
+
+        <div id="regout">{{reg_prediction}}</div>
+        <div id="classout">{{class_prediction}}</div>
+
+    </div>
+</body>
+
+</html>
