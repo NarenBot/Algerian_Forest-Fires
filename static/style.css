@@ -40,6 +40,18 @@ ul li a {
     float: right;
 }
 
+.flex-wrapper {
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.footer {
+    margin-top: auto;
+    text-align: center;
+}
+
 /* -----------------------------------------------------------------------------------------------*/
 
 /* CONTAINER */

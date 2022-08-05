@@ -7,20 +7,33 @@
 </head>
 
 <body>
-    <h1>Algerian Forest-Fires Prediction: </style>
+    <h1>Algerian Forest-Fires Prediction:
     </h1>
+    <div class="flex-wrapper">
 
-    <div class="main">
-        <ul>
-            <li>
-                <a id="single" type="button" href="{{url_for('single_prediction')}}">Single Prediction</a>
-            </li>
-            <li>
-                <a id="batch" type="button" href="{{url_for('batch_prediction')}}">Batch Prediction</a>
-            </li>
-        </ul>
+        <div class="content">
+            <ul>
+                <li>
+                    <a id="single" type="button" href="{{url_for('single_prediction')}}">Single Prediction</a>
+                </li>
+                <li>
+                    <a id="batch" type="button" href="{{url_for('batch_prediction')}}">Batch Prediction</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <h4>Project by Narendran M</h4>
+            <a href="https://www.github.com/NarenBot" alt="NarenBot">
+                <img src="static\images\GitHub-logo.png" width="60px" height="30px" />
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.linkedin.com/in/narendran-mudadi/" alt="nm">
+                <img src="static\images\LinkedIn-logo.png" width="35px" height="30px" />
+            </a>
+        </div>
+
     </div>
-
 </body>
 
 </html>
