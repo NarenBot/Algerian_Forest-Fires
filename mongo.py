@@ -1,4 +1,6 @@
 import pymongo
+import certifi
+
 
 class MongodbConnection:
     # Initialization of MongoDB Atlas
@@ -6,13 +8,14 @@ class MongodbConnection:
         try:
             self.username = username
             self.password = password
-            self.url = f"mongodb+srv://{self.username}:{self.password}@cluster10.odazv.mongodb.net/?retryWrites=true&w=majority"
+            # @cluster0.zqru4ev.mongodb.net/?retryWrites=true&w=majority
+            self.url = f"mongodb+srv://{self.username}:{self.password}@cluster0.zqru4ev.mongodb.net/?retryWrites=true&w=majority"
         except Exception as e:
             raise e
 
     def getMongoClient(self):
         try:
-            client = pymongo.MongoClient(self.url)
+            client = pymongo.MongoClient(self.url, tlsCAFile=certifi.where())
             return client
         except Exception as e:
             raise e
@@ -42,4 +45,3 @@ class MongodbConnection:
             return list_cursor
         except Exception as e:
             raise e
-
